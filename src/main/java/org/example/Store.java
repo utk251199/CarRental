@@ -10,12 +10,14 @@ public class Store {
     Location location;
     VehicleManager vehicleManager;
     List<Reservation> reservations;
+    ReservationFactory reservationFactory;
 
-    Store(int storeId,Location location, VehicleManager vehicleManager){
+    Store(int storeId,Location location, VehicleManager vehicleManager, ReservationFactory reservationFactory){
         this.storeId = storeId;
         this.location = location;
         this.vehicleManager = vehicleManager;
         this.reservations = new ArrayList<>();
+        this.reservationFactory = reservationFactory;
     }
 
     public List<Vehicle> getVehiclesInStore(){
@@ -23,8 +25,7 @@ public class Store {
     }
 
     public Reservation createReservation(Person person, Vehicle vehicle, LocalDate startDate, LocalDate endDate){
-        Reservation reservation = new Reservation();
-        reservation.createReservation(person,vehicle,startDate,endDate);
+        Reservation reservation = reservationFactory.createReservation(person,vehicle,startDate,endDate);
         reservations.add(reservation);
         return reservation;
     }

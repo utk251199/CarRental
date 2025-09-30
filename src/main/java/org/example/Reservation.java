@@ -49,7 +49,6 @@ public class Reservation {
         return reservationStatus;
     }
 
-    // Setters
     public void setReservationId(int reservationId) {
         this.reservationId = reservationId;
     }

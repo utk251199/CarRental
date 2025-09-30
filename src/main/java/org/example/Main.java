@@ -15,7 +15,7 @@ public class Main {
             vehicles.add(vehicle);
 
             List<Store> stores = new ArrayList<>();
-            stores.add(new Store(1,location,new VehicleManager(vehicles)));
+            stores.add(new Store(1,location,new VehicleManager(vehicles),new DefaultReservationFactory()));
 
             StoreManager sm = new StoreManager(stores);
             Store nearestStore = sm.findStoreByPincode(426647);
