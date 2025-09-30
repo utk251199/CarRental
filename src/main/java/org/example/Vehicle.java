@@ -5,15 +5,15 @@ public class Vehicle {
     private int vehicleId;
     private String vehicleNumber;
     private int kmsDriven;
-    private int hourlyRentalCharge;
+    private int dailyRentalCharge;
     private String manufacturer;
     private String model;
     private VehicleType vehicleType;
 
-    public Vehicle(int vehicleId, String vehicleNumber, int hourlyRentalCharge, VehicleType vehicleType) {
+    public Vehicle(int vehicleId, String vehicleNumber, int dailyRentalCharge, VehicleType vehicleType) {
         this.vehicleId = vehicleId;
         this.vehicleNumber = vehicleNumber;
-        this.hourlyRentalCharge = hourlyRentalCharge;
+        this.dailyRentalCharge = dailyRentalCharge;
         this.vehicleType = vehicleType;
     }
 
@@ -42,12 +42,12 @@ public class Vehicle {
         this.kmsDriven = kmsDriven;
     }
 
-    public int getHourlyRentalCharge() {
-        return hourlyRentalCharge;
+    public int getDailyRentalCharge() {
+        return dailyRentalCharge;
     }
 
-    public void setHourlyRentalCharge(int hourlyRentalCharge) {
-        this.hourlyRentalCharge = hourlyRentalCharge;
+    public void setDailyRentalCharge(int dailyRentalCharge) {
+        this.dailyRentalCharge = dailyRentalCharge;
     }
 
     public String getManufacturer() {

@@ -19,7 +19,7 @@ public class Bill {
                 reservation.getStartDate(),
                 reservation.getEndDate()
         );
-        amount = totalDays * reservation.getVehicle().getHourlyRentalCharge();
+        amount = totalDays * reservation.getVehicle().getDailyRentalCharge();
         return amount;
     }
 
